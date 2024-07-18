@@ -5,3 +5,8 @@ class Todo(models.Model):
     due_date = models.DateTimeField()
     completed = models.BooleanField(default=False)
     favorite = models.BooleanField(default=False)
+
+
+class TodoList(models.Model):
+
+    name = models.CharField(max_length=255)
