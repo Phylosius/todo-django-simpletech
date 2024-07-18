@@ -1,6 +1,8 @@
 from django.contrib import admin
 
-from todo.models import Todo, TodoList
+from .models import Todo, TodoList
 
-admin.site.register(Todo)
-admin.site.register(TodoList)
+
+@admin.register(Todo, TodoList)
+class TodoAdmin(admin.ModelAdmin):
+    pass
