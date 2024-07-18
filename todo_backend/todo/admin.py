@@ -16,3 +16,5 @@ class TodoListAdmin(admin.ModelAdmin):
 @admin.register(Todo)
 class TodoAdmin(admin.ModelAdmin):
     list_display = ('title', 'due_date', 'completed', 'favorite')
+    list_filter = ('due_date', 'completed', 'favorite')
+    search_fields = ('title',)
