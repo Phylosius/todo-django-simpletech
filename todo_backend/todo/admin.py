@@ -10,4 +10,4 @@ class GenericAdmin(admin.ModelAdmin):
 
 @admin.register(Todo)
 class TodoAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('title', 'due_date', 'completed', 'favorite')
