@@ -4,8 +4,8 @@ from .models import Todo, TodoList
 
 
 @admin.register(TodoList)
-class GenericAdmin(admin.ModelAdmin):
-    pass
+class TodoListAdmin(admin.ModelAdmin):
+    list_display = ('name',)
 
 
 @admin.register(Todo)
