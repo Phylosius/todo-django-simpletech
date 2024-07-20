@@ -9,6 +9,9 @@ class TodoTestCase(TestCase):
     DUMMY_TODO_TITLE = 'Test Todo Element'
 
     def setUp(self):
+        """
+        method for test utilities definition
+        """
         self.todoList = TodoList()
         self.todoList.name = "Test Todo List"
         self.todoList.save()
