@@ -14,6 +14,7 @@ class TodoViewSet(viewsets.ModelViewSet):
     filterset_fields = ('due_date', 'favorite', 'completed')
     search_fields = ('title',)
 
+
 class TodoListViewSet(viewsets.ReadOnlyModelViewSet):
 
     queryset = TodoList.objects.all()
