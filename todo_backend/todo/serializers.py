@@ -4,9 +4,12 @@ from todo.models import Todo, TodoList
 
 
 class TodoSerializer(serializers.ModelSerializer):
+
+    dueDate = serializers.DateField(source='due_date')
+
     class Meta:
         model = Todo
-        fields = '__all__'
+        exclude = ['due_date']
 
 
 class TodoListSerializer(serializers.ModelSerializer):
