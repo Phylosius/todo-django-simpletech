@@ -12,7 +12,7 @@ class TodoViewSet(viewsets.ModelViewSet):
     serializer_class = TodoSerializer
     permission_classes = (IsAuthenticated,)
     filterset_fields = ('due_date', 'favorite', 'completed')
-
+    search_fields = ('title',)
 
 class TodoListViewSet(viewsets.ReadOnlyModelViewSet):
 
